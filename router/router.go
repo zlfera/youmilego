@@ -9,6 +9,7 @@ import (
 
 func Init() {
 	r := gin.Default()
+	r.GET("/", handlers.HelloPage)
 	v1 := r.Group("/v1")
 	{
 		v1.GET("/hello", handlers.HelloPage)
