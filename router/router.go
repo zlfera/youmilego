@@ -16,5 +16,5 @@ func Init() {
 		v1.GET("/welcome", handlers.WelcomePage)
 	}
 	port := os.Getenv("PORT")
-	r.Run(port)
+	r.Run(":" + port)
 }
